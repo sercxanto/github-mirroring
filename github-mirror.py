@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 '''
 Mirrors repositories from github.com
 '''
@@ -55,7 +56,7 @@ def getargs():
     parser.add_argument('--repo',
                         help='github.com repo to mirror')
     parser.add_argument('--mirror-host', '-m',
-                        help='host to mirror too')
+                        help='host to mirror to')
     parser.add_argument('--mirror-type', '-t',
                         default='gitolite',
                         choices=['gitolite'],
