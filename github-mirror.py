@@ -242,7 +242,7 @@ def get_github_wiki_url(url, name, args):
     wiki_url = re.sub('.git$', '.wiki.git', url)
     try:
         gitcmd('ls-remote %s' % wiki_url,
-               '.',
+               args.working_directory,
                'Checking for %s wiki' % name,
                args.quiet)
     except MirrorError:
